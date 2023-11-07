@@ -7,23 +7,40 @@
 </head>
 <body>
     <script>
-    function getComputerChoice(Rock, Paper, Scissors) {
     
+    function getComputerChoice() {
+        
+        let result= Math.floor(Math.random()* 16);
+        
+        if (result <= 5) {
+            console.log("Rock!");
+        } 
+        else if (result >= 10) {
+            console.log("Paper!");
+        } 
+        else
+            console.log("Scissors!");
 
     }
-
+    
+    
     function playRound(playerSelection, computerSelection) {
 
+        if (playerSelection === computerSelection) {
+            console.log("Tie!");
+        }
+
 
 
     }
 
+    let playerSelection= "";
+    let computerSelection= getComputerChoice();
+
+   
 
 
-
-
-
-    function game () {
+    function game() {
 
 
 
