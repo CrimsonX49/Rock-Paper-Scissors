@@ -8,25 +8,28 @@
 <body>
     <script>
     
-    let arr= ["Rock!", "Paper!", "Scissors!"];
-    
-        function getComputerChoice() {
-        let result= arr[(Math.floor(Math.random()* 3))];
-        return result;
-       }
+      function getComputerChoice() {
+          let arr= ["Rock!", "Paper!", "Scissors!"];
+          let result= arr[(Math.floor(Math.random()* 3))];
+          return result;
+          }
 
-    let input= prompt("Make a choice: Rock, paper, or scissors?");    
-    while (input == null) {
-            input= prompt("Make a choice: Rock, paper, or scissors?");
+      
+      function getPlayerChoice () {  
+           let input= prompt("Make a choice: Rock, paper, or scissors?"); 
+           while (input == null) {
+             input= prompt("Make a choice: Rock, paper, or scissors?");
+            }
+           let result= input.charAt(0).toUpperCase() + input.slice(1).toLowerCase() + "!"; 
+           return result;
            }
-   
-        function getPlayerChoice () {
-        let result= input.charAt(0).toUpperCase() + input.slice(1).toLowerCase() + "!"; 
-        return result;
-       }
-    
-    let playerSelection= getPlayerChoice();
-    let computerSelection= getComputerChoice();  
+           
+           
+           
+         
+
+      let playerSelection= getPlayerChoice()
+      let computerSelection= getComputerChoice()  
         
        function playRound(playerSelection, computerSelection) {
 
