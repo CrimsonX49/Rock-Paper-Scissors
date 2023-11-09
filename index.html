@@ -8,35 +8,41 @@
 <body>
     <script>
     
-      function getComputerChoice() {
+        function getComputerChoice() {
           let arr= ["Rock!", "Paper!", "Scissors!"];
           let result= arr[(Math.floor(Math.random()* 3))];
           return result;
           }
+        console.log(getComputerChoice());
 
-      
-      function getPlayerChoice () {  
-           let input= prompt("Make a choice: Rock, paper, or scissors?"); 
+        function getPlayerChoice () {  
+          let input= prompt("Make a choice: Rock, paper, or scissors?"); 
            while (input == null) {
              input= prompt("Make a choice: Rock, paper, or scissors?");
             }
-           let result= input.charAt(0).toUpperCase() + input.slice(1).toLowerCase() + "!"; 
-           return result;
-           }
-           
-           
-           
-         
+          let result= input.charAt(0).toUpperCase() + input.slice(1).toLowerCase() + "!"; 
+          return result;
+          }
+        console.log(getPlayerChoice());
 
-      let playerSelection= getPlayerChoice()
-      let computerSelection= getComputerChoice()  
+        function playRound (playChoice, compChoice) {
+          if (playChoice === compChoice) {
+            return "Tie! Try again!";
+          } else if (playChoice == "Rock!" && compChoice == "Scissors!") {
+            return "Congrats! You win!";
+          } else if (playChoice == "Paper!" && compChoice == "Rock!") {
+            return "Congrats! You win!";
+          } else if (playChoice == "Scissors!" && compChoice == "Paper!") {
+            return "Congrats! You win!"; 
+          } else {
+            return "Sorry, you lose! The Computer has won!"
+          }
+        } 
         
-       function playRound(playerSelection, computerSelection) {
+        let playChoice= getPlayerChoice();
+        let compChoice= getComputerChoice();
 
-    
-    }
-
-       console.log()
+       console.log(playRound(playChoice, compChoice)); 
 
    
 
