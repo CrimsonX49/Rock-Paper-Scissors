@@ -15,7 +15,7 @@
           }
         console.log(getComputerChoice());
 
-        function getPlayerChoice () {  
+        function getPlayerChoice() {  
           let input= prompt("Make a choice: Rock, paper, or scissors?"); 
            while (input == null) {
              input= prompt("Make a choice: Rock, paper, or scissors?");
@@ -25,14 +25,14 @@
           }
         console.log(getPlayerChoice());
 
-        function playRound (playChoice, compChoice) {
+        function playRound(playChoice, compChoice) {
           if (playChoice === compChoice) {
             return "Tie! Try again!";
-          } else if (playChoice == "Rock!" && compChoice == "Scissors!") {
+          } else if (playChoice === "Rock!" && compChoice === "Scissors!") {
             return "Congrats! You win!";
-          } else if (playChoice == "Paper!" && compChoice == "Rock!") {
+          } else if (playChoice === "Paper!" && compChoice === "Rock!") {
             return "Congrats! You win!";
-          } else if (playChoice == "Scissors!" && compChoice == "Paper!") {
+          } else if (playChoice === "Scissors!" && compChoice === "Paper!") {
             return "Congrats! You win!"; 
           } else {
             return "Sorry, you lose! The Computer has won!"
