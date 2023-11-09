@@ -25,24 +25,25 @@
           }
         console.log(getPlayerChoice());
 
-        function playRound(playChoice, compChoice) {
-          if (playChoice === compChoice) {
+        function playRound(compChoice, playChoice) {
+          if (compChoice === playChoice) {
             return "Tie! Try again!";
-          } else if (playChoice === "Rock!" && compChoice === "Scissors!") {
-            return "Congrats! You win!";
-          } else if (playChoice === "Paper!" && compChoice === "Rock!") {
-            return "Congrats! You win!";
-          } else if (playChoice === "Scissors!" && compChoice === "Paper!") {
-            return "Congrats! You win!"; 
+          } else if (compChoice === "Rock!" && playChoice === "Scissors!") {
+            return "Sorry, you lose! The Computer has won!";
+          } else if (compChoice === "Paper!" && playChoice === "Rock!") {
+            return "Sorry, you lose! The Computer has won!";
+          } else if (compChoice === "Scissors!" && playChoice === "Paper!") {
+            return "Sorry, you lose! The Computer has won!"; 
           } else {
-            return "Sorry, you lose! The Computer has won!"
+            return "Congrats! You win!"
           }
         } 
         
-        let playChoice= getPlayerChoice();
         let compChoice= getComputerChoice();
+        let playChoice= getPlayerChoice();
+        
 
-       console.log(playRound(playChoice, compChoice)); 
+       console.log(playRound(compChoice, playChoice)); 
 
    
 
